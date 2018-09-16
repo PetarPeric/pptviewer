@@ -1,0 +1,66 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .gitignore
+* build.xml
+* build_ant.xml
+* buildtools\
+* buildtools\.svn\
+* buildtools\.svn\all-wcprops
+* buildtools\.svn\entries
+* buildtools\.svn\prop-base\
+* buildtools\.svn\prop-base\jarjar-1.0.jar.svn-base
+* buildtools\.svn\text-base\
+* buildtools\.svn\text-base\jarjar-1.0.jar.svn-base
+* buildtools\jarjar-1.0.jar
+* ic_launcher-web.png
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* libs\android-pre-support-v4.jar => app\libs\android-pre-support-v4.jar
+* libs\commons-codec-1.5.jar => app\libs\commons-codec-1.5.jar
+* libs\commons-logging-1.1.jar => app\libs\commons-logging-1.1.jar
+* libs\dom4j-1.6.1.jar => app\libs\dom4j-1.6.1.jar
+* libs\jsr173_1.0_api.jar => app\libs\jsr173_1.0_api.jar
+* libs\log4j-1.2.13.jar => app\libs\log4j-1.2.13.jar
+* libs\schemaorg_apache_xmlbeans_new.jar => app\libs\schemaorg_apache_xmlbeans_new.jar
+* libs\sjsxp.jar => app\libs\sjsxp.jar
+* libs\xmlbeans-2.3.0.jar => app\libs\xmlbeans-2.3.0.jar
+* ooxml-xsds-src\ => app\src\main\java\
+* ooxml-xsds-src\.DS_Store => app\src\main\resources\.DS_Store
+* ooxml-xsds-src\org\.DS_Store => app\src\main\resources\org\.DS_Store
+* ooxml-xsds-src\org\openxmlformats\.DS_Store => app\src\main\resources\org\openxmlformats\.DS_Store
+* ooxml-xsds-src\org\openxmlformats\schemas\.DS_Store => app\src\main\resources\org\openxmlformats\schemas\.DS_Store
+* proguard-project.txt => app\proguard-project.txt
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+* src\log4j.properties => app\src\main\resources\log4j.properties
+* src\org\apache\poi\util\package.html => app\src\main\resources\org\apache\poi\util\package.html
+* src\org\apache\poi\xslf\usermodel\.DS_Store => app\src\main\resources\org\apache\poi\xslf\usermodel\.DS_Store
+* src\org\apache\poi\xslf\usermodel\empty.pptx => app\src\main\resources\org\apache\poi\xslf\usermodel\empty.pptx
+* src\org\apache\poi\xslf\usermodel\presetShapeDefinitions.xml => app\src\main\resources\org\apache\poi\xslf\usermodel\presetShapeDefinitions.xml
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

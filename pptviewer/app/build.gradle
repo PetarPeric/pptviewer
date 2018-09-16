@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 15
+    buildToolsVersion "28.0.2"
+
+    defaultConfig {
+        applicationId "com.petar.pptviewer"
+        minSdkVersion 8
+        targetSdkVersion 15
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+    }
+}
+
+dependencies {
+    compile files('libs/android-pre-support-v4.jar')
+    compile files('libs/commons-codec-1.5.jar')
+    compile files('libs/commons-logging-1.1.jar')
+    compile files('libs/dom4j-1.6.1.jar')
+    compile files('libs/jsr173_1.0_api.jar')
+    compile files('libs/log4j-1.2.13.jar')
+    compile files('libs/schemaorg_apache_xmlbeans_new.jar')
+    compile files('libs/sjsxp.jar')
+    compile files('libs/xmlbeans-2.3.0.jar')
+}
