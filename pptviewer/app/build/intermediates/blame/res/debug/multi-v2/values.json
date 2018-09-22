@@ -40,6 +40,45 @@
             ]
         },
         {
+            "outputFile": "C:\\Users\\PETAR\\Documents\\GitHub\\pptviewer\\pptviewer\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\PETAR\\Documents\\GitHub\\pptviewer\\pptviewer\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "19",
+                        "endColumns": "58",
+                        "endOffsets": "73"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "262",
+                        "endColumns": "57",
+                        "endOffsets": "315"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\PETAR\\Documents\\GitHub\\pptviewer\\pptviewer\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "19,66,120,172",
+                        "endColumns": "45,52,50,56",
+                        "endOffsets": "60,114,166,224"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,101,154,205",
+                        "endColumns": "45,52,50,56",
+                        "endOffsets": "96,149,200,257"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\Petar\\Documents\\GitHub\\pptviewer\\pptviewer\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {

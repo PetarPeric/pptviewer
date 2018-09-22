@@ -145,6 +145,67 @@
             ]
         },
         {
+            "outputFile": "C:\\Users\\PETAR\\Documents\\GitHub\\pptviewer\\pptviewer\\app\\build\\intermediates\\res\\merged\\debug\\values-v11_values-v11.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\PETAR\\Documents\\GitHub\\pptviewer\\pptviewer\\app\\src\\main\\res\\values-v11\\styles.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "19",
+                        "endColumns": "63",
+                        "endOffsets": "78"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "62",
+                        "endOffsets": "113"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\PETAR\\Documents\\GitHub\\pptviewer\\pptviewer\\app\\build\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\PETAR\\Documents\\GitHub\\pptviewer\\pptviewer\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "19",
+                        "endColumns": "58",
+                        "endOffsets": "73"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "262",
+                        "endColumns": "57",
+                        "endOffsets": "315"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\PETAR\\Documents\\GitHub\\pptviewer\\pptviewer\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "19,66,120,172",
+                        "endColumns": "45,52,50,56",
+                        "endOffsets": "60,114,166,224"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,101,154,205",
+                        "endColumns": "45,52,50,56",
+                        "endOffsets": "96,149,200,257"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\Petar\\Documents\\GitHub\\pptviewer\\pptviewer\\app\\build\\intermediates\\res\\merged\\debug\\values-v14_values-v14.arsc.flat",
             "map": [
                 {
@@ -155,6 +216,28 @@
                         "startOffsets": "17",
                         "endColumns": "77",
                         "endOffsets": "90"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "76",
+                        "endOffsets": "127"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\PETAR\\Documents\\GitHub\\pptviewer\\pptviewer\\app\\build\\intermediates\\res\\merged\\debug\\values-v14_values-v14.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\PETAR\\Documents\\GitHub\\pptviewer\\pptviewer\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "19",
+                        "endColumns": "77",
+                        "endOffsets": "92"
                     },
                     "to": {
                         "startLines": "2",

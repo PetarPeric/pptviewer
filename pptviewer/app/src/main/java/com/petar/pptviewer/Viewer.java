@@ -1,13 +1,18 @@
 package com.petar.pptviewer;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
-import android.os.Handler;
-import android.os.Message;
+import android.graphics.PorterDuff;
+import android.os.AsyncTask;
+import android.os.Environment;
 import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
 
 import net.pbdavey.awt.Graphics2D;
@@ -19,8 +24,9 @@ import org.apache.poi.xslf.usermodel.XMLSlideShow;
 import org.apache.poi.xslf.usermodel.XSLFSlide;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.StringReader;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
@@ -36,47 +42,20 @@ public class Viewer {
     private Activity activity;
     private String path;
 
+    private int numOfFinishedSlide = -1;
+
     private int slideCount = 0;
-    private XSLFSlide[] slide;
+    private XSLFSlide[] slides;
     private XMLSlideShow ppt;
     private Dimension pgsize;
 
-
-    private Bitmap create(Activity activity, String path){
-        this.activity = activity;
-        this.path = path;
-
-        slideCount = 0;
-
-        try {
-            ppt = new XMLSlideShow(OPCPackage.open(path,
-                    PackageAccess.READ));
-            pgsize = ppt.getPageSize();
-            System.out.println("pgsize.width: " + pgsize.getWidth()
-                    + ", pgsize.height: " + pgsize.getHeight());
-            slide = ppt.getSlides();
-        } catch (InvalidFormatException e) {
-            e.printStackTrace();
-        }
-
-        Bitmap bmp = Bitmap.createBitmap((int) pgsize.getWidth(),
-                (int) pgsize.getHeight(), Bitmap.Config.RGB_565);
-        Canvas canvas = new Canvas(bmp);
-        Paint paint = new Paint();
-        paint.setColor(android.graphics.Color.WHITE);
-        paint.setFlags(Paint.ANTI_ALIAS_FLAG);
-        canvas.drawPaint(paint);
-
-        final Graphics2D graphics2d = new Graphics2D(canvas);
-
-        slide[slideCount].draw(graphics2d);
-
-        return bmp;
-
-    }
+    private String tempFolderPath;
 
 
-    public static Bitmap load(Activity activity, String path){
+    //Ucitavanje prezentacije
+    //Paramentri: Aktiviti i putanja do prezentacije
+    //Automatski pokrene citanje prvog slajda
+    public static void load(Activity activity, String path) {
 
         Viewer.singleton = new Viewer();
 
@@ -114,7 +93,7 @@ public class Viewer {
         }
 
 
-        return singleton.create(activity,path);
+        singleton.create(activity, path);
 
 //        try {
 //            setTitle(path);
@@ -126,33 +105,149 @@ public class Viewer {
 //        }
     }
 
-    public static Bitmap nextSlide(){
-        if(singleton!=null){
-            return singleton.nativeNextSlide();
-        } else {
-            return null;
+    //Zahtev za pripremu seledeg slajda
+    public static void prepareNextSlide() {
+        if (singleton != null) {
+            singleton.nativePrepareNextSlide();
         }
     }
 
-    private Bitmap nativeNextSlide(){
-        Bitmap bmp = Bitmap.createBitmap((int) pgsize.getWidth(),
-                (int) pgsize.getHeight(), Bitmap.Config.RGB_565);
-        Canvas canvas = new Canvas(bmp);
-        Paint paint = new Paint();
-        paint.setColor(android.graphics.Color.WHITE);
-        paint.setFlags(Paint.ANTI_ALIAS_FLAG);
-        canvas.drawPaint(paint);
+    //Zahtev za pripremu seledeg slajda
+    public static void preparePreviosSlide() {
+        if (singleton != null) {
+            singleton.nativePreviousNextSlide();
+        }
+    }
 
-        final Graphics2D graphics2d = new Graphics2D(canvas);
+    //Zahtev za pripremu predhodnog slajda
+    public static String getPrepareSlide() {
+        if (singleton != null) {
+            return singleton.nativeGetPrepareSlide();
+        } else {
+            return null;
+        }
 
+    }
+
+    //Ucitavanje slajda
+    //Vraca niz bajtova bitmape
+    private String nativeGetPrepareSlide() {
+        if (slideCount <= numOfFinishedSlide) {
+            return tempFolderPath + File.separator + "slide_" + slideCount + ".png";
+        } else {
+            return "";
+        }
+    }
+
+    private void create(Activity activity, String path) {
+        this.activity = activity;
+        this.path = path;
+
+        slideCount = 0;
+        numOfFinishedSlide = -1;
+
+        new LoadPowerPointPresentation().execute();
+    }
+
+    private void nativePrepareNextSlide() {
         slideCount++;
-        if(slideCount>=slide.length){
+        if (slideCount >= slides.length) {
             slideCount--;
         }
 
-        slide[slideCount].draw(graphics2d);
+    }
 
-        return bmp;
+    private void nativePreviousNextSlide() {
+
+        slideCount--;
+        if (slideCount < 0) {
+            slideCount++;
+        }
+
+    }
+
+    @SuppressLint("StaticFieldLeak")
+    private class LoadPowerPointPresentation extends AsyncTask<Void, Integer, Void> {
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+
+            File tempFolder = new File(Environment.getExternalStorageDirectory().getPath() +
+                    File.separator +
+                    getAppName(activity) +
+                    File.separator +
+                    "presentationTemp");
+
+            boolean success = true;
+            if (!tempFolder.exists()) {
+                success = tempFolder.mkdirs();
+            }
+            if (success) {
+                tempFolderPath = tempFolder.getPath();
+                for(File tempFile : tempFolder.listFiles()) {
+                    tempFile.delete();
+                }
+                try {
+                    ppt = new XMLSlideShow(OPCPackage.open(path,
+                            PackageAccess.READ));
+                    pgsize = ppt.getPageSize();
+                    System.out.println("pgsize.width: " + pgsize.getWidth()
+                            + ", pgsize.height: " + pgsize.getHeight());
+                    slides = ppt.getSlides();
+                } catch (InvalidFormatException e) {
+                    e.printStackTrace();
+                }
+
+                Bitmap slide = Bitmap.createBitmap((int) pgsize.getWidth(),
+                        (int) pgsize.getHeight(), Bitmap.Config.RGB_565);
+                Canvas canvas = new Canvas(slide);
+                Paint paint = new Paint();
+                paint.setColor(android.graphics.Color.WHITE);
+                paint.setFlags(Paint.ANTI_ALIAS_FLAG);
+                canvas.drawPaint(paint);
+
+
+                for (int i = 0; i < slides.length; i++) {
+                    FileOutputStream tempSlideOS = null;
+                    try {
+                        tempSlideOS = new FileOutputStream(tempFolder.getPath() +
+                                File.separator +
+                                "slide_" + i + ".png");
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+
+                    final Graphics2D graphics2d = new Graphics2D(canvas);
+                    slides[i].draw(graphics2d);
+
+                    if (tempSlideOS != null) {
+                        slide.compress(Bitmap.CompressFormat.PNG, 100, tempSlideOS);
+                    }
+                    publishProgress(i);
+                    canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
+                }
+
+            }
+
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            super.onProgressUpdate(values);
+            numOfFinishedSlide = values[0];
+        }
+    }
+
+
+    private String getAppName(Context context) {
+        PackageManager packageManager = context.getPackageManager();
+        ApplicationInfo applicationInfo = null;
+        try {
+            applicationInfo = packageManager.getApplicationInfo(context.getApplicationInfo().packageName, 0);
+        } catch (final PackageManager.NameNotFoundException ignored) {
+        }
+        return (String) (applicationInfo != null ? packageManager.getApplicationLabel(applicationInfo) : "Unknown");
     }
 
 }
