@@ -1,45 +1,45 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:1:1-12:12
-INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:1:1-12:12
-INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:1:1-12:12
-INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:1:1-12:12
-INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:1:1-12:12
-INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:1:1-12:12
-INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:1:1-12:12
+ADDED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:1:1-12:12
+INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:1:1-12:12
+INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:1:1-12:12
+INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:1:1-12:12
+INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:1:1-12:12
+INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:1:1-12:12
+INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:1:1-12:12
 	package
-		ADDED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:2:5-28
-		INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:2:5-28
+		INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:4:5-30
-		INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:4:5-30
+		INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:1:11-69
+		ADDED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:1:11-69
 	android:versionCode
-		ADDED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:3:5-28
-		INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:3:5-28
+		INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:7:5-81
+ADDED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:7:5-81
 	android:name
-		ADDED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:7:22-78
+		ADDED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:7:22-78
 application
-ADDED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:9:5-10:51
+ADDED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:9:5-10:51
 	android:label
-		ADDED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml:10:9-35
 uses-sdk
-INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\PETAR\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Petar\Documents\GitHub\pptviewer\pptviewer\app\src\main\AndroidManifest.xml
