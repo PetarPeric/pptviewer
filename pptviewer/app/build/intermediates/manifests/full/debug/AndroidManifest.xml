@@ -1,15 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.petar.ppt"
+    package="com.petar.pptx"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="16"
-        android:targetSdkVersion="27" />
+        android:targetSdkVersion="16" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <application android:label="pptxViewer" />
+    <application
+        android:debuggable="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="pptxViewer"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <receiver android:name="com.petar.pptx.PPTXReceiver" >
+            <intent-filter>
+                <action android:name="com.petar.pptxplugin.UnityToIntent" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.petar.pptx.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
 </manifest>

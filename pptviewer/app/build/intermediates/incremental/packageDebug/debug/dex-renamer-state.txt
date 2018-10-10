@@ -1,0 +1,4 @@
+#Wed Oct 10 12:10:57 CEST 2018
+base.0=C\:\\Users\\Petar\\Documents\\GitHub\\pptviewer\\pptviewer\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

@@ -21,11 +21,3 @@
 #
 -keep class com.**{*;}
 -keep class org.**{*;}
--keepattributes EnclosingMethod
--dontwarn android.support.v4.**
--keepattributes SourceFile,LineNumberTable,*Annotation*
--keepattributes Signature
--keepattributes InnerClasses
--dontwarn **
--dontoptimize
--dontobfuscate

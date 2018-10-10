@@ -1,12 +1,26 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
+
+buildscript {
+    repositories {
+        mavenCentral() // or jcenter()
+    }
+
+    dependencies {
+        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.8.4'
+    }
+}
+
+// make sure this line comes *after* you apply the Android plugin
+apply plugin: 'com.getkeepsafe.dexcount'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 16
     buildToolsVersion "28.0.2"
 
     defaultConfig {
+        applicationId "com.petar.pptx"
         minSdkVersion 16
-        targetSdkVersion 27
+        targetSdkVersion 16
     }
 
     buildTypes {
@@ -16,10 +30,7 @@ android {
         }
     }
 
-    dexOptions {
-        preDexLibraries = false
-        additionalParameters=['--core-library']
-    }
+
 }
 
 dependencies {

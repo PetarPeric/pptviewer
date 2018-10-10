@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\Petar\\Documents\\GitHub\\pptviewer\\pptviewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Petar\\Documents\\GitHub\\pptviewer\\pptviewer\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Petar\\Documents\\GitHub\\pptviewer\\pptviewer\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Petar\\Documents\\GitHub\\pptviewer\\pptviewer\\app\\src\\main\\res\\layout\\activity_main.xml"
+    }
+]

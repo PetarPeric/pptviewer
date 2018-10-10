@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.petar.ppt.test" >
+    package="com.petar.pptx.test">
 
-    <uses-sdk
-        android:minSdkVersion="16"
-        android:targetSdkVersion="27" />
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="16" />
 
-    <instrumentation
-        android:name="android.test.InstrumentationTestRunner"
-        android:functionalTest="false"
-        android:handleProfiling="false"
-        android:label="Tests for com.petar.ppt.test"
-        android:targetPackage="com.petar.ppt.test" />
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
-    <application
-        android:debuggable="true"
-        android:label="pptxViewer" >
+    <application android:debuggable="true" >
         <uses-library android:name="android.test.runner" />
     </application>
 
+    <instrumentation android:name="android.test.InstrumentationTestRunner"
+                     android:targetPackage="com.petar.pptx"
+                     android:handleProfiling="false"
+                     android:functionalTest="false"
+                     android:label="Tests for com.petar.pptx"/>
 </manifest>
